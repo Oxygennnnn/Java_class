@@ -1,12 +1,25 @@
 import java.util.Scanner;
 public class Addition{
     public static void main(String[] args){
-        Scanner input=new Scanner(System.in);
-        System.out.print("Enter first integer:");
-        int number1=input.nextInt();
-        System.out.print("Enter second integer:");
-        int number2=input.nextInt();
-        int sum=number1+number2;
-        System.out.printf("Sum is: %d%n",sum);
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter start number:");
+        int start=input.nextInt();
+        System.out.print("Enter end number:");
+        int end=input.nextInt();
+        int sum=0;
+        if (start<end){
+            sum=start;
+            do{start=start+1;
+               sum+=start;
+            }while(start<end);
+            System.out.printf("Result is: %d",sum);
+        }
+        else if (start==end){
+            sum=start;
+            System.out.printf("Result is: %d",sum);
+        }
+        else{
+            System.out.printf("Wrong input");
+        }
     }
 }
